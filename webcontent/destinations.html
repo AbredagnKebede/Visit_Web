@@ -1,0 +1,114 @@
+<!-- destinations.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations - Visit Tembaro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Leaflet CSS for maps -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+    <!-- AOS CSS for animations -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="destinations.css">
+</head>
+<body>
+    <!-- Navigation (Same as index.html) -->
+    <nav class="navbar">
+        <!-- ... navigation content ... -->
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="destination-hero">
+        <div class="hero-content">
+            <h1>Discover Tembaro</h1>
+            <p>Explore the most beautiful destinations in our region</p>
+        </div>
+    </header>
+
+    <!-- Destination Filter -->
+    <section class="destination-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Places</button>
+                <button class="filter-btn" data-filter="nature">Nature</button>
+                <button class="filter-btn" data-filter="historical">Historical</button>
+                <button class="filter-btn" data-filter="cultural">Cultural</button>
+                <button class="filter-btn" data-filter="adventure">Adventure</button>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Search destinations...">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Destinations -->
+    <section class="destinations-grid">
+        <div class="container">
+            <!-- Destination Card 1 -->
+            <div class="destination-card" data-aos="fade-up" data-category="nature">
+                <div class="card-image">
+                    <img src="images/destinations/mountain-vista.jpg" alt="Mountain Vista">
+                    <div class="card-badge">
+                        <i class="fas fa-mountain"></i> Nature
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3>Mountain Vista</h3>
+                    <div class="location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Northern Tembaro</span>
+                    </div>
+                    <p>Experience breathtaking views of Tembaro's mountain ranges with hiking trails and scenic viewpoints.</p>
+                    <div class="card-meta">
+                        <span><i class="fas fa-clock"></i> Best time: Oct-Feb</span>
+                        <span><i class="fas fa-hiking"></i> Activities: Hiking, Photography</span>
+                    </div>
+                    <button class="view-details" onclick="openDestinationDetails(1)">View Details</button>
+                </div>
+            </div>
+
+            <!-- Add more destination cards following the same pattern -->
+            <!-- Ensure to include diverse locations across Tembaro -->
+        </div>
+    </section>
+
+    <!-- Interactive Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2>Explore Destinations</h2>
+            <div class="map-container">
+                <div id="map"></div>
+                <div class="map-sidebar">
+                    <h3>Notable Locations</h3>
+                    <div class="location-list">
+                        <!-- Location items will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destination Modal -->
+    <div class="destination-modal" id="destinationModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <!-- Content will be dynamically loaded -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="footer">
+        <!-- ... footer content ... -->
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="destinations.js"></script>
+</body>
+</html>
